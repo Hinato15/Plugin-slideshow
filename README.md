@@ -4,10 +4,12 @@ Slider automatique et contrôlable par click sur éléments "button" et par les 
 
 APPEL
 
+/*
 <script>
   $(function() {
     $(".slider").slideshow();
   });
 </script>
+*/
 
 Prend en paramètre 'number' l'intervalle de temps de défilement entre 2 'slides' (1000 pour 1 seconde)
