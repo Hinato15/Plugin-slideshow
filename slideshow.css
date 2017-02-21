@@ -1,0 +1,106 @@
+#slider .fade:first-of-type {
+    display: flex;
+}
+
+#slider .fade {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+#slider .fade div {
+    padding: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    #slider .fade {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    #slider .fade img {
+        max-width: 300px;
+    }
+}
+
+
+/* Fading animation */
+
+#slider .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2.5s;
+    animation-name: fade;
+    animation-duration: 2.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+/* Slider controls */
+
+#slider button {
+    background-color: #EB6841;
+    border: solid 2px #d44d02;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+#slider button:hover {
+    background-color: #d44d02;
+    cursor: pointer;
+}
+
+#slider .prev {
+    position: absolute;
+    top: 45%;
+}
+
+#slider .next {
+    position: absolute;
+    right: 0;
+    top: 45%;
+}
+
+#slider .stop {
+    position: absolute;
+    left: 45%;
+    bottom: 10px;
+}
+
+#slider .play {
+    position: absolute;
+    right: 45%;
+    bottom: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    #slider .stop {
+        left: 10%;
+    }
+    #slider .play {
+        right: 10%;
+    }
+}
